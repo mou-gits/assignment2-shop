@@ -1,0 +1,47 @@
+Product* findProductById(int id) {
+    for (auto& p : products) {
+        if (p.id == id) return &p;
+    }
+    return nullptr;
+}
+
+std::string formatPrice(double value) {
+    std::ostringstream out;
+    out << std::fixed << std::setprecision(2) << value;
+    return out.str();
+}
+
+void saveCartToFile() {
+    std::ofstream file("data/order.txt");
+    if (!file.is_open()) return;
+
+    for (const auto& item : cart) {
+        file << item.first << "," << item.second << "\n";
+    }
+
+    file.close();
+}
+
+void loadCartFromFile() {
+    cart.clear();
+
+    std::ifstream file("data/order.txt");
+    if (!file.is_open()) return;
+
+    std::string line;
+    while (std::getline(file, line)) {
+        std::stringstream ss(line);
+        std::string idStr, qtyStr;
+
+        if (std::getline(ss, idStr, ',') && std::getline(ss, qtyStr)) {
+            int id = std::stoi(idStr);
+            int qty = std::stoi(qtyStr);
+
+            if (findProductById(id) && qty > 0) {
+                cart[id] = qty;
+            }
+        }
+    }
+
+    file.close();
+}

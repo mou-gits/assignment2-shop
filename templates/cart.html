@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | TechNest Store</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-left">
+            <img src="/img/logo.png" alt="Store Logo" class="logo">
+            <h1 class="store-name">TechNest Store</h1>
+        </div>
+
+        <nav class="main-nav">
+            <a href="/">Home</a>
+            <a href="/cart">Cart</a>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+        <section class="cart-box">
+            <h2>Your Cart</h2>
+            {{CART_ROWS}}
+
+            <div class="cart-summary">
+                <p><strong>Subtotal:</strong> $ {{SUBTOTAL}}</p>
+                <p><strong>HST (13%):</strong> $ {{HST}}</p>
+                <p><strong>Total:</strong> $ {{TOTAL}}</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TechNest Store. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.site-header {
+    background: #0f172a;
+    color: white;
+    padding: 18px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #2563eb;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    background: white;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.store-name {
+    font-size: 1.6rem;
+}
+
+.main-nav {
+    display: flex;
+    gap: 18px;
+}
+
+.main-nav a {
+    color: white;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background 0.25s ease;
+}
+
+.main-nav a:hover {
+    background: #2563eb;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.product-card {
+    display: block;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #dbe3ee;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.banner {
+    width: 100%;
+    background: linear-gradient(135deg, #111, #333);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-content {
+    max-width: 800px;
+}
+
+.banner-title {
+    font-size: 2.8rem;
+    color: #fff;
+    margin: 0;
+    font-style: italic;
+    /* keeps your earlier requirement */
+}
+
+.banner-subtitle {
+    margin-top: 12px;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.cart-active {
+    border: 2px solid red;
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+
+.site-footer {
+    margin-top: 50px;
+    background: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}

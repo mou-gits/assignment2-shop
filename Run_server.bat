@@ -1,0 +1,6 @@
+@echo off
+echo Building Docker image...
+docker build -t assignment2-shop .
+
+echo Running server...
+docker run -p 8080:8080 assignment2-shop

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{NAME}} | TechNest Store</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-left">
+            <img src="/img/logo.png" alt="Store Logo" class="logo">
+            <h1 class="store-name">TechNest Store</h1>
+        </div>
+
+        <nav class="main-nav">
+            <a href="/">Home</a>
+            <a href="/cart">Cart</a>
+        </nav>
+    </header>
+
+    <main class="product-page">
+        <section class="product-card-detail">
+            <div class="product-image-box">
+                <img src="/img/{{IMAGE}}" alt="{{NAME}}">
+            </div>
+
+            <div class="product-info">
+                <h2 class="product-title">{{NAME}}</h2>
+                <p class="product-description">{{DESCRIPTION}}</p>
+                <p class="product-price">$ {{PRICE}}</p>
+
+                <form action="/add-to-cart/{{ID}}" method="post" class="add-cart-form">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                    <button type="submit" class="cart-btn">Add to Cart</button>
+                </form>
+
+                <div class="product-nav-buttons">
+                    {{PREV_BUTTON}}
+                    {{NEXT_BUTTON}}
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TechNest Store. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/product.js"></script>
+</body>
+
+</html>

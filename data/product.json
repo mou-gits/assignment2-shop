@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Ergonomic Mouse",
+    "description": "A comfortable wireless mouse designed for everyday productivity. Features adjustable DPI and silent clicks.",
+    "price": 24.99,
+    "image": "mouse.png"
+  },
+  {
+    "id": 2,
+    "name": "Mechanical RGB Keyboard",
+    "description": "Compact mechanical keyboard with tactile switches and customizable RGB lighting.",
+    "price": 79.99,
+    "image": "keyboard.png"
+  },
+  {
+    "id": 3,
+    "name": "7-Port USB-C Hub",
+    "description": "Expand your laptop connectivity with HDMI, USB 3.0 ports, SD reader, and power delivery.",
+    "price": 39.99,
+    "image": "usbc_hub.png"
+  },
+  {
+    "id": 4,
+    "name": "Aluminum Laptop Stand",
+    "description": "Ergonomic aluminum stand that raises your laptop for better posture and cooling.",
+    "price": 29.99,
+    "image": "laptop_stand.png"
+  }
+]
